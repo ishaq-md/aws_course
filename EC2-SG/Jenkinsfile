@@ -20,7 +20,7 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                        dir("aws_course/ec2-sg")
+                        dir("EC2-SG")
                         {
                             git "https://github.com/ishaqmdgcp/EC2.git"
                         }
@@ -30,7 +30,7 @@ pipeline {
 
          stage('Provision infrastructure') {
             steps {
-                dir("") 
+                dir("EC2-SG") 
                 {
                 sh 'terraform init'
                 sh 'terraform plan'
