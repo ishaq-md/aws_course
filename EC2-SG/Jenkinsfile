@@ -20,7 +20,7 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                        dir("ec2")
+                        dir("ec2-sg")
                         {
                             git "https://github.com/ishaqmdgcp/EC2.git"
                         }
